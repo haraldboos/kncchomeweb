@@ -1,0 +1,14 @@
+{% load static %}
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <video class="video-overlay" controls>
+          <source src="{% static 'images/tec.mp4' %}" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <img class="image-overlay" src="image1.jpg" alt="Overlay Image">
+      </div>
+      <!-- Add more slides as needed -->
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>

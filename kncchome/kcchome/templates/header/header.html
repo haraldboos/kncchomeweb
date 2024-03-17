@@ -1,0 +1,335 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- full page.js -->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.min.css">
+        <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>கிளிநொச்சி மத்திய கல்லூரி</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}"> -->
+    <style>
+         body {
+            overflow-x: hidden;
+             /* Set background image to cover entire body */
+    background-repeat: repeat; 
+        }
+        .carad{
+            margin: 5px;
+            padding: 0;
+        }
+        .boybg{
+            background: rgba(83, 81, 81, 0.3);
+            backdrop-filter: blur( 20px );
+            -webkit-backdrop-filter: blur( 5px );
+            /* border-radius: 10px; */
+            /* border: 1px solid rgba( 255, 255, 255, 0.18 ); */
+            background: inherit; 
+            /* backdrop-filter: blur(10px);  */ 
+        }
+        
+      /* .swiper-slide {
+        position: relative;
+      }
+      .video-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .image-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1; /* Ensure the image is on top of the video */
+      
+    
+        /* .container-fluid{
+            padding: 5px;
+            margin: 20px;
+        } */
+    /*  */
+    /* .ncard{
+        overflow: hidden;
+        transition: transform 0.3s ease;
+    }
+    .ncard:hover{
+        transform: scale(1.05);
+
+    } */ 
+
+    /* .overlay-image {
+      position: absolute;
+      top: 10%;
+    
+      left: 10%;
+      transform: translate(-50%, -50%);
+      opacity: 0.7; /* Adjust overlay opacity as needed */
+      /* body {
+    overflow-x: hidden; 
+      } */
+      .item1 {
+        background-color: rgba(255, 255, 255, 0.35); 
+
+  
+}
+center h2{
+
+    font-family: 'Bernoully', sans-serif;
+
+}
+
+.ptxt{
+    
+    font-family: Arial, sans-serif;
+    font-size: medium;
+    border-radius: 2px solid #000;
+    white-space: nowrap;
+    font-weight: bold;
+    background: inherit; 
+    backdrop-filter: blur(10px); 
+}
+/* #fullscreen{
+    z-index: -2;
+} */
+nev{
+    background-color: transparent;
+}
+.nnev{
+    top: 0;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.75); 
+    z-index: 6;
+    font-weight:bold;
+    width: 100%;
+}
+    .nevbtton{
+        z-index:99;
+    }
+    .nevbtton:hover{
+        background-color: blue;
+    }
+    .swiper {
+      width: 100%;
+    }
+    .swiper-slide1 {
+      background-color: #fff; /* Background color for cards */
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for cards */
+      padding: 20px;
+    }
+    .slide-card-img-top {
+      max-width: 100%;
+      height: auto;
+    }
+    .boxxx{
+        background-color: gray;
+    }
+    .chr{
+        border-top: 2px solid;
+        color: white;
+    }
+      .nav-link:hover {
+color: red;
+}
+    .nevitem{
+        z-index: 2;
+        color: red;
+      }
+    .swiper-container{
+        position:relative;
+    }
+    .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+    }
+    .swiper-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    /* object-fit: cover; Ensure the image covers the entire Swiper container */
+    z-index: 2; /* Place the image behind the slides */
+}
+.folder {
+  width: 200px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.folder.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.folder-header {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.folder-content {
+  display: none;
+  padding: 10px;
+}
+
+.bg-gradient1 {
+   
+    background: linear-gradient(45deg, rgba(170, 166, 166, 0.5), rgba(241, 226, 226, 0.7), rgba(218, 187, 187, 0.5));
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(177, 177, 177, 0.1);
+
+}
+/*.navbar {
+          background-color: transparent !important;
+          z-index: 1000;
+      }
+*/
+.animate-folder {
+  transform: translateY(0);
+  opacity: 1;
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+.navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+}
+.ne1vbg{
+    background-color: black;
+    
+}
+html {
+  scroll-behavior: smooth;
+}
+/* .text-wrap {
+        overflow-wrap: break-word;
+    } */
+  </style>
+</head>
+
+<!-- </div> -->
+<body class="bg-dark m-0">
+    
+    <!-- <div class="">
+    {% include 'inc1/nev.html' %}
+    </div> -->
+    
+    {% block content %}
+    {% endblock content %}
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<!-- <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const swiper = new Swiper(".swiper1",{
+            autoplay:{
+                delay:6000,
+                disableOnInteraction:false,
+            },
+            loop:true,
+            pagination:{
+                el:".swiper-pagination",
+
+            },
+            navigation:{
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
+            }
+        });
+     
+        var swiper1 = new Swiper('.swiper-container1', {
+            slidesPerView: 4,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination1',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next1',
+                prevEl: '.swiper-button-prev1',
+            }
+        });
+    $(document).scroll(function(){
+        $('.ohyah').fadeIn('slow');
+    });
+     
+
+    });
+
+</script> -->
+<script>
+    AOS.init();
+  </script>
+<script>
+    $(document).ready(function(){
+        var swiper = new Swiper(".swiper1",{
+            autoplay: {
+            delay: 6000,
+            disableOnInteraction: false
+        },
+        loop: true,
+        pagination: {
+            el: ".swiper-pagination"
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev"
+        }
+        });
+        // $(window).scroll(function() {
+//     var windowScroll = $(this).scrollTop();
+//     var folderOffset = $('#folder').offset().top;
+//     var windowHeight = $(this).height();
+    
+//     if (windowScroll + windowHeight > folderOffset) {
+//       $('#folder').addClass('animate-folder');
+//     }
+//   });
+    $(document).ready(function(){
+        var text = "Dear ICT Union.On behalf of the school, I extend our sincerest appreciation for your outstanding efforts in advancing our ,technological infrastructure. Your dedication and expertise in creating our new website exemplify innovation and progress, Thank you for your invaluable contribution to our school community. Warm regards,";
+        var speed = 50;
+        var inde = 0;
+
+        (function type(){
+            const wntotymessage= $('.ptxt');
+
+            if(inde<text.length){
+                wntotymessage.append(text.charAt(inde));
+                if(text.charAt(inde)==','||text.charAt(inde)=='.'){
+                    wntotymessage.append('<br>');
+                }
+                inde++;
+                setTimeout(type,speed);
+            }
+        })();
+    });
+    });
+</script>
+<!-- <script>
+//     $(document).ready(function(){
+//         $('#fullpage').fullpage({
+            
+//         })
+//     })
+
+// </script> -->
+</body>
+
+</html>
