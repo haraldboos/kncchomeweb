@@ -1,0 +1,71 @@
+{% include 'header/header.html'%}
+{% block content %}
+{% load static %}
+{% include 'inc1/nevv.html' %}
+<div>
+    <img src="{% static 'images/11.svg' %}"  class="img-fluid">
+
+    <div class=" text-light  justify-content-center image-overlay  text-center" >
+        <h4>{{name}} Album</h4>
+        <p class="m-0">Events</p>
+      </div>
+    <div class="container">
+        <!-- <div class="row row-cols-5 row-md-cols-3 row-sm-cols-2 mx-2 my-2 justify-content-center swiper-container">
+            <div class="swiper-wraper">
+                .swiper-slide
+            <div class="card bg-dark col-2 carad text-white boybg border-warning" style="width: 20rem;" data-aos="flip-left" data-aos-duration="1000">
+                <img src="{% static 'images/7.svg'%}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h4 class="card-header border-warning">school moto</h4>
+
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+                <div class="card-footer bg-transparent border-warning">date</div>
+                </div>
+        </div> -->
+        <div class="swiper-container text-white">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img class="img" src="{% static 'images/7.svg' %}">
+                    <div class="card-body">
+                        <h4 class="card-title">
+                        hi
+                        </h4>
+                        <p class="card-text">hello</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img class="img" src="{% static 'images/7.svg' %}">
+                    <div class="card-body">
+                        <h4 class="card-title">
+                        hi
+                        </h4>
+                        <p class="card-text">hello</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img class="card-img-top border-warning" src="{% static 'images/7.svg' %}">
+                    <div class="card-body">
+                        <h4 class="card-title">
+                        hi
+                        </h4>
+                        <p class="card-text">hello</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img class="img" src="{% static 'images/7.svg' %}">
+                    <div class="card-body">
+                        <h4 class="card-title">
+                        hi
+                        </h4>
+                        <p class="card-text">hello</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+{% include 'header/footer.html' %}
+   <div></div>
+{% endblock content %}

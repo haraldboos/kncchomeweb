@@ -11,6 +11,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <title>கிளிநொச்சி மத்திய கல்லூரி</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
@@ -25,6 +27,22 @@
             margin: 5px;
             padding: 0;
         }
+        .swiper-container {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .swiper-slide {
+        width: 300px; /* Width of each card */
+        margin-right: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .swiper-slide img {
+        width: 100%;
+        border-radius: 10px;
+    }
         .boybg{
             background: rgba(83, 81, 81, 0.3);
             backdrop-filter: blur( 20px );
@@ -88,6 +106,24 @@ center h2{
 
 }
 
+/* 
+.swiper-container {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .swiper-slide {
+        background-color: transparent;
+        border: 1px solid #0a0a0a;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .swiper-slide img {
+        width: 100%;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    } */
 .ptxt{
     
     font-family: Arial, sans-serif;
@@ -118,19 +154,19 @@ nev{
     .nevbtton:hover{
         background-color: blue;
     }
-    .swiper {
+    /* .swiper {
       width: 100%;
     }
     .swiper-slide1 {
-      background-color: #fff; /* Background color for cards */
+      background-color: #fff; 
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for cards */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
       padding: 20px;
     }
     .slide-card-img-top {
       max-width: 100%;
       height: auto;
-    }
+    } */
     .boxxx{
         background-color: gray;
     }
@@ -145,14 +181,14 @@ color: red;
         z-index: 2;
         color: red;
       }
-    .swiper-container{
+    /* .swiper-container{
         position:relative;
     }
     .swiper-slide img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-    }
+    } */
     .swiper-overlay {
     position: absolute;
     top: 0;
@@ -302,6 +338,23 @@ html {
 //       $('#folder').addClass('animate-folder');
 //     }
 //   });
+    $(document).ready(function(){
+
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 'auto',
+        spaceBetween: 30,
+        autoplay: {
+            delay: 3000, // Autoplay delay in milliseconds
+            disableOnInteraction: false, // Prevent autoplay from stopping on user interaction
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+
+
+    });
     $(document).ready(function(){
         var text = "Dear ICT Union.On behalf of the school, I extend our sincerest appreciation for your outstanding efforts in advancing our ,technological infrastructure. Your dedication and expertise in creating our new website exemplify innovation and progress, Thank you for your invaluable contribution to our school community. Warm regards,";
         var speed = 50;
