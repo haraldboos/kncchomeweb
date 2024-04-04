@@ -1,0 +1,43 @@
+<!-- Slider main container -->
+{% load static %}
+
+<div class="scontainer">
+    <div class="swiper-wrapper ">
+      <!-- Slide 1 with image -->
+      <div class="swiper-slide w-100">
+        <img src="{% static 'images/10.svg' %}" alt="Image 1" style=" width: 100%;
+        border-radius: 1px;" class="img-fluid">
+      </div>
+      
+      <!-- Slide 2 with image -->
+      <div class="swiper-slide w-100" style=" width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        <img src="{% static 'images/7.svg' %}" alt="Image 2" style=" width: 100%;
+        border-radius: 1px;" class="img-fluid">
+      </div>
+      
+      <!-- Slide 3 with image -->
+      <div class="swiper-slide w-100">
+        <img src="{% static 'images/8.svg' %}" alt="Image 3" style=" width: 100%;
+        border-radius: 1px;" class="img-fluid">
+      </div>
+      <div class="swiper-slide">
+        <img src="{% static 'images/9.svg' %}" alt="Image 3" style=" width: 100%;
+        border-radius: 1px;">
+      </div>
+      <div class="swiper-slide">
+        <img src="{% static 'images/6.svg' %}" alt="Image 3">
+      </div>
+
+      <!-- Add more slides with images as needed -->
+    </div>
+    
+    <!-- If you need pagination -->
+    <div class="swiper-pagination"></div>
+    
+    <!-- If you need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+  

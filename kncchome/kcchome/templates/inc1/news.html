@@ -1,0 +1,21 @@
+<div class="container mt-4">
+    <div class=" card border-warning text-white bg-dark" data-aos="fade-up"
+    data-aos-anchor-placement="center-bottom">
+        <h2 class="card-header h2 border-warning text-center">
+            <i class="bi bi-newspaper"></i> KNCC NEWS PANNEL
+        </h2>
+        <ul class="list-group list-group-flush text-white ">
+          {% for news in news %}
+            <li class="list-group-item bg-dark  border-warning">
+              
+                <blockquote class="blockquote  text-white mb-0 ">
+                    <h4 class="h3">{{ news.newshd }}</h4>
+                    <p class="body-text">{{ news.newsdetails }}</p>
+                    <footer class="blockquote-footer text-white">Sourse by kncc administration-<cite title="Source Title">{{ news.newsdate }}</cite></footer>
+                  </blockquote>
+                </li>
+            
+            {% endfor %}
+          </ul>
+      </div>
+</div>

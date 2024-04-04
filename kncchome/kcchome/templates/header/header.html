@@ -11,6 +11,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="{%static '/images/oll/favicon.ico'%}">
+
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -23,6 +25,14 @@
              /* Set background image to cover entire body */
     background-repeat: repeat; 
         }
+        .cardac {
+      transition: transform 0.3s ease;
+    }
+    .cardac:hover {
+      transform: scale(1.05);
+      background-color: #ccc;
+      /* text-emphasis-color: black; */
+    }
         .carad{
             margin: 5px;
             padding: 0;
@@ -100,6 +110,44 @@
 
   
 }
+.overlay {
+      position: relative;
+    }
+.overlay-text {
+      position: absolute;
+      top: 45%; /* Adjust as needed */
+      left: 50%;
+      transform: translate(-50%,-50%);
+      color: white;
+      font-size: 100px;
+      font-weight: bold;
+      text-align: center;
+      padding: 10px;
+    }
+
+    @media (max-width: 768px) {
+    .overlay-text {
+        font-size: 60px; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .overlay-text {
+        top: 50%; /* Adjust vertical positioning for smaller screens */
+        font-size: 40px; /* Further reduce font size for even smaller screens */
+    }
+    
+}
+@media(min-width:320px){
+    .nevimg{
+        width: auto;
+    }
+}
+.nevimg{
+    width: fit-content;
+    min-width: 50px;
+    max-width: 280px;
+}
 center h2{
 
     font-family: 'Bernoully', sans-serif;
@@ -142,11 +190,16 @@ nev{
 }
 .nnev{
     top: 0;
+    height: fit-content;
     position: absolute;
     background-color: rgba(0, 0, 0, 0.75); 
     z-index: 6;
     font-weight:bold;
     width: 100%;
+}
+.hist{
+    z-index: 6;
+    margin-top:20px;
 }
     .nevbtton{
         z-index:99;
@@ -230,6 +283,10 @@ color: red;
     box-shadow: 0 4px 8px rgba(177, 177, 177, 0.1);
 
 }
+/* ffg{
+    background-color: #000;
+    opacity: 0.1;
+} */
 /*.navbar {
           background-color: transparent !important;
           z-index: 1000;
@@ -264,7 +321,10 @@ html {
     </div> -->
     
     {% block content %}
+
     {% endblock content %}
+   
+
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.min.js"></script>
@@ -329,6 +389,25 @@ html {
             prevEl: ".swiper-button-prev"
         }
         });
+        var mySwiper = new Swiper('.scontainer', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    // Autoplay
+    autoplay: {
+      delay: 5000, // Delay between slides in milliseconds (5 seconds in this example)
+      disableOnInteraction: false, // Enable/disable autoplay on user interaction (default is true)
+    },
+    // If you need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+    // If you need navigation buttons
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
         // $(window).scroll(function() {
 //     var windowScroll = $(this).scrollTop();
 //     var folderOffset = $('#folder').offset().top;
@@ -343,6 +422,8 @@ html {
     var swiper = new Swiper('.swiper-container', {
         slidesPerView: 'auto',
         spaceBetween: 30,
+        centeredSlides: true,
+
         autoplay: {
             delay: 3000, // Autoplay delay in milliseconds
             disableOnInteraction: false, // Prevent autoplay from stopping on user interaction
@@ -383,6 +464,6 @@ html {
 //     })
 
 // </script> -->
-</body>
 
+</body>
 </html>

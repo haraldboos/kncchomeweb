@@ -3,14 +3,15 @@
 {% load static %}
 <div class="m-0 ">
     {% include 'inc1/nevv.html' %}
-    {% include 'inc1/agsb.html' %}
+
+    {% include 'inc1/bauslider.html' %}
 </div>
     <div class="mt-5">
        
         <!-- card for principle -->
          <div class="container m-1 mx-auto p-0">
             <div class="card border-warning  bg-secondary" data-aos="zoom-out" >
-            <div class="row  g-0">
+            <div class="row  g-0 ">
                 <!-- <div class="col-3 ">
                     <div class="vr" >
 
@@ -26,19 +27,60 @@
                     </div>    
                 </div> -->
 
-                <div class="col-md-4 col-sm-2">
-                    <img src="{% static 'images/p.svg' %}" class="img-fluid rounded-start h-100" alt="...">
+                <div class="col-md-4 col-sm-1 position-relative">
+                    <img src="{% static 'images/oll/princ.svg' %}" class="img-fluid rounded-start h-100 w-100 d-inline " alt="...">
                   </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text ptxt"></p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  <div class="col-md-8 col-sm-2 bg-dark pl-3">
+                    <div class="card bg-dark text-white pl-2 ">
+                    <div class="card-body d-inline pl-2">
+                    <h3 class="h3 card-header border-warning "><center>Message from principle</center></h3>
+
+                      <h5 class="card-title ml-3 text-white">I'am Poolagaraja</h5>
+                      <p class="card-text ptxt text-white"></p>
+                      <!-- <p class="card-footer  g-0 text-white"><small class="text-muted text-white">glade</small></p> -->
                     </div>
+                    
+                    </div>
+                    
                   </div>
+                  
             </div>
         </div>
         </div>
+        <!-- neww try  -->
+        <!-- <div class="row g-0 bg-body-secondary position-relative">
+            <div class="col-md-6 mb-md-0 p-md-4">
+              <img src="{% static 'images/oll/princ.svg' %}" class="w-100" alt="...">
+            </div>
+            <div class="col-md-6 p-4 ps-md-0">
+              <h5 class="mt-0">Columns with stretched link</h5>
+              <p>Another instance of placeholder content for this other custom component. It is intended to mimic what some real-world content would look like, and we're using it here to give the component a bit of body and size.</p>
+              <a href="#" class="stretched-link">Go somewhere</a>
+            </div>
+          </div> -->
+        {% include 'inc1/news.html' %}
+
+        <!-- <div class="container mt-4">
+            <div class=" card border-warning text-white bg-dark" data-aos="fade-up"
+            data-aos-anchor-placement="center-bottom">
+                <h2 class="card-header h2 border-warning text-center">
+                    <i class="bi bi-newspaper"></i> KNCC NEWS PANNEL
+                </h2>
+                <ul class="list-group list-group-flush text-white ">
+                  {% for news in news %}
+                    <li class="list-group-item bg-dark  border-warning">
+                      
+                        <blockquote class="blockquote  text-white mb-0 ">
+                            <h4 class="h3">{{ news.newshd }}</h4>
+                            <p class="body-text">{{ news.newsdetails }}</p>
+                            <footer class="blockquote-footer text-white">Sourse by kncc administration-<cite title="Source Title">{{ news.newsdate }}</cite></footer>
+                          </blockquote>
+                        </li>
+                    
+                    {% endfor %}
+                  </ul>
+              </div>
+        </div> -->
         <!-- divclear -->
         <div class="container mt-5">
             <center><h2 class="text-white">SCHOOL  VISIONS</h2></center>
@@ -47,9 +89,9 @@
                 <div class="card boybg border-warning " data-aos="fade-right" data-aos-duration="1000">
                     
                         <div class="card-body text-white">
-                            <h4 class="card-header border-warning">school moto</h4>
+                            <h4 class="card-header border-warning">தூர நோக்கு</h4>
                             <p class="card-text">
-                                skgokhjgkldjgklejgkjgfklnmgkljklgjsklsdkljgfklsjgfklsj
+                                நவீன தொழிநுட்ப உத்திகளுக்கு முகங்கொடுக்கக் கூடிய அறிவும் திறனும் சிறந்த பண்பும் கொண்ட சமூகம்.
                             </p>
 
                         </div>
@@ -60,9 +102,9 @@
                     <div class="card boybg border-warning text-white" data-aos="zoom-out" data-aos-duration="1000">
                         
                             <div class="card-body">
-                                <h4 class="card-header border-warning">school moto</h4>
+                                <h4 class="card-header border-warning">மகுட வாசகம்</h4>
                                 <p class="card-text">
-                                    skgokhjgkldjgklejgkjgfklnmgkljklgjsklsdkljgfklsjgfklsj
+                                    “கற்று ஆய்ந்து ஒழுகு”
                                 </p>
     
                             </div>
@@ -73,9 +115,10 @@
                         <div class="card boybg border-warning text-white" data-aos="fade-left" data-aos-duration="1000">
                             
                                 <div class="card-body">
-                                    <h4 class="card-header border-warning">school moto</h4>
+                                    <h4 class="card-header border-warning">பணிக்கூற்று
+                                    </h4>
                                     <p class="card-text">
-                                        skgokhjgkldjgklejgkjgfklnmgkljklgjsklsdkljgfklsjgfklsj
+                                        நவீன கல்வி உத்திகள் மூலம் எதிர்காலத்தின் சவால்களுக்கு ஏற்ப மேம்பாடடைந்த ஒரு சமூகத்தை அர்ப்பணிப்புடன் உருவாக்குதல்
                                     </p>
         
                                 </div>
@@ -90,80 +133,47 @@
         <div class="container-fluid" >
             <center><h2 class="text-white mx-auto mt-5">OUR ACHIVEMENTS</h2></center>
             
-            <div class="row row-cols-5 row-md-cols-3 row-sm-cols-2 mx-2 my-2 justify-content-center" >
-            <div class="card col-2 carad boybg text-white border-warning" style="width: 17rem;" data-aos="flip-left" data-aos-duration="1000">
+            <!-- <div class="row row-cols-5 row-md-cols-3 row-sm-cols-2 mx-2 my-2 justify-content-center" > -->
+            <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                      {% for ach in achev %}
+                      <div class="swiper-slide">
+                        <div class="card col-2 carad boybg text-white border-warning" style="width: 17rem;" data-aos="flip-left" data-aos-duration="1000">
+                        <img src="{{ ach.coverimg.url }}" class="card-img-top" alt="...">
+                        <a class="text-decoration-none text-white" href="{% url 'galary' ach.eventid %}">
+
+                        <div class="card-body">
+                            <h4 class="card-header  ">{{ ach.eventitle }}</h4>
+        
+                          <!-- <p class="card-text">{{ ach.adetail }}</p> -->
+                        </div>
+                        </a>
+                        <div class="card-footer border-warning justify-content-center">{{ ach.eventdate }}</div>
+                      </div>
+                    </div>
+                      {% endfor %}
+                      <!-- Add more cards as needed -->
+                    </div>
+                    <!-- Add pagination -->
+                    <div class="swiper-pagination"></div>
+            </div>
+            <!-- <div class="card col-2 carad boybg text-white border-warning" style="width: 17rem;" data-aos="flip-left" data-aos-duration="1000">
                 <img src="{% static 'images/10.svg'%}" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h4 class="card-header border-warning">school moto</h4>
 
                   <p class="card-text">Some eeequick example text to build on the card title and make up the bulk of the card's content.</p>
                 </div>
-              </div>
-              <div class="card col-2 carad boybg border-warning text-white" style="width: 17rem;" data-aos="flip-left" data-aos-duration="1000">
-                <img src="{% static 'images/6.svg'%}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h4 class="card-header border-warning">school moto</h4>
-
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-              </div>
-              <div class="card bg-dark col-2 carad text-white boybg border-warning" style="width: 17rem;" data-aos="flip-left" data-aos-duration="1000">
-                <img src="{% static 'images/7.svg'%}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h4 class="card-header border-warning">school moto</h4>
-
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-              </div>
-              <div class="card col-2 carad text-white boybg border-warning" style ="width: 17rem;" data-aos="flip-left" data-aos-duration="1000">
-                <img src="{% static 'images/9.svg'%}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h4 class="card-header border-warning">school moto</h4>
-
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-                
-              </div>
-              
-            </div>
-            <div class="container mt-4">
-                <div class=" card border-warning text-white bg-dark" data-aos="fade-up"
-                data-aos-anchor-placement="center-bottom">
-                    <h3 class="card-header border-warning text-center">
-                        <i class="bi bi-newspaper"></i> KNCC NEWS PANNEL
-                    </h3>
-                    <ul class="list-group list-group-flush text-white ">
-                        <li class="list-group-item bg-dark  border-warning">
-                            <blockquote class="blockquote  text-white mb-0 ">
-                                <p>First Rank in E-tec</p>
-                                <p class="body-text">the student studying in kilinochi central collage in student in tharshan got first rank in kilinochi</p>
-                                <footer class="blockquote-footer text-white">Sourse by kncc administration-<cite title="Source Title">2023/04/01</cite></footer>
-                              </blockquote></li>
-                              <li class="list-group-item bg-dark  border-warning">
-                                <blockquote class="blockquote  text-white mb-0 ">
-                                    <p>Match box in knkcc</p>
-                                    <p class="body-text">in search of school the administrative found the matchs box in  school student bag  late the student name changes to theepeti by hiscomrades</p>
-                                    <footer class="blockquote-footer text-white">Sourse by kncc administration-<cite title="Source Title">2023/04/01</cite></footer>
-                                  </blockquote></li>
-                                  <li class="list-group-item bg-dark  border-warning">
-                                    <blockquote class="blockquote  text-white mb-0 ">
-                                        <p>First Rank in E-tec</p>
-                                        <p class="body-text">the student studying in kilinochi central collage in student in tharshan got first rank in kilinochi</p>
-                                        <footer class="blockquote-footer text-white">Sourse by kncc administration-<cite title="Source Title">2023/04/01</cite></footer>
-                                      </blockquote></li>
-                                      <li class="list-group-item bg-dark  border-warning">
-                                        <blockquote class="blockquote  text-white mb-0 ">
-                                            <p>Match box in knkcc</p>
-                                            <p class="body-text">in search of school the administrative found the matchs box in  school student bag  late the student name changes to theepeti by hiscomrades</p>
-                                            <footer class="blockquote-footer text-white">Sourse by kncc administration-<cite title="Source Title">2023/04/01</cite></footer>
-                                          </blockquote></li>
-
-                                  
-                        
-                      </ul>
-                  </div>
-            </div>
+              </div> -->
+              <!-- okkkkkkkk -->
+            <!-- </div> -->
+         
         </div>
+
+    
+              <!-- Add more cards as needed -->
+            <!-- Add pagination -->
+          
 
         
         <!--</div>

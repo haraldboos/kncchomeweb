@@ -3,12 +3,16 @@
 {% load static %}
 {% include 'inc1/nevv.html' %}
 <div>
+   
     <img src="{% static 'images/11.svg' %}"  class="img-fluid">
-
-    <div class=" text-light  justify-content-center image-overlay  text-center" >
-        <h4>{{name}} Album</h4>
-        <p class="m-0">Events</p>
+    {% if event %}
+    <div class=" text-light  justify-content-center image-overlay  text-center py-3" >
+        
+            <h3 class="h3">OUR ALBUM</h3>
+            <h4 class="m-0 h4">Events</h4>
+       
       </div>
+      {% endif %}
     <div class="container">
         <!-- <div class="row row-cols-5 row-md-cols-3 row-sm-cols-2 mx-2 my-2 justify-content-center swiper-container">
             <div class="swiper-wraper">
@@ -25,47 +29,37 @@
         </div> -->
         <div class="swiper-container text-white">
             <div class="swiper-wrapper">
+                {% for event in event %}
                 <div class="swiper-slide">
-                    <img class="img" src="{% static 'images/7.svg' %}">
+                    <div class="card bg-dark border-warning">
+                    <img class="img" src="{{ event.coverimg.url }}">
+                    <a class="text-decoration-none" href="{% url 'galary' event.eventid %}">
                     <div class="card-body">
-                        <h4 class="card-title">
-                        hi
+                        <h4 class="card-title text-white mx-auto">
+                        {{event.eventitle}}
                         </h4>
-                        <p class="card-text">hello</p>
+                        <!-- <p class="card-text text-light">{{event.eventdisc}}</p> -->
                     </div>
+                    </a>
+                    
+                    <div>
+                        <div class="card-footer text-light border-warning">{{event.eventdate}}</div>
                 </div>
-                <div class="swiper-slide">
-                    <img class="img" src="{% static 'images/7.svg' %}">
-                    <div class="card-body">
-                        <h4 class="card-title">
-                        hi
-                        </h4>
-                        <p class="card-text">hello</p>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <img class="card-img-top border-warning" src="{% static 'images/7.svg' %}">
-                    <div class="card-body">
-                        <h4 class="card-title">
-                        hi
-                        </h4>
-                        <p class="card-text">hello</p>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <img class="img" src="{% static 'images/7.svg' %}">
-                    <div class="card-body">
-                        <h4 class="card-title">
-                        hi
-                        </h4>
-                        <p class="card-text">hello</p>
-                    </div>
-                </div>
+                
             </div>
+            
         </div>
+        {% endfor %}
         
     </div>
 </div>
-{% include 'header/footer.html' %}
-   <div></div>
+
+   <div>
+    
+
+   </div>
+   </div>
+   <div class="">
+    {% include 'header/footer.html' %}
+   </div>
 {% endblock content %}
