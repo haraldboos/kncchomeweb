@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'jazzmin',
+    # 'tailwind',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -40,6 +41,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'kcchome',
+    # 'theme',
+    'django_browser_reload'
+
+    #  'compressor',
 ]
 
 MIDDLEWARE = [
@@ -50,6 +55,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django_browser_reload.middleware.BrowserReloadMiddleware'
+
 ]
 
 ROOT_URLCONF = 'kncchome.urls'
@@ -132,3 +139,13 @@ MEDIA_ROOT = BASE_DIR/'static'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+# COMPRESS_ROOT = BASE_DIR / 'static'
+# COMPRESS_ENABLED = True
+# STATICFILES_FINDERS = ('compressor.finders.CompressorFinder',)
+# TAILWIND_APP_NAME = 'theme'
+
+# TAILWIND_CSS_PATH = 'css/dist/styles.css'
+# NPM_BIN_PATH = "/home/rav1/.nvm/versions/node/v21.7.1/bin/npm"
+# INTERNAL_IPS = [
+#     "127.0.0.1",
+# ]

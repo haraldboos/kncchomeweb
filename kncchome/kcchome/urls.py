@@ -7,6 +7,8 @@ urlpatterns=[
     path('galary/<int:event>', views.gallery,name='galary'),
     path('history/', views.histoory,name='history'),
     path('sgallery/', views.sgallery,name='sgalary'),
+    path('events/', views.alevents,name='event'),
+
     path('oba/',views.oba,name='oba')
 
 ]

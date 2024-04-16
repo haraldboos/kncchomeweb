@@ -7,18 +7,18 @@
    
 </div> -->
 {% include 'inc1/nevv.html' %}
-<div class=" container  hist d-block my-5 mx-auto" style="top: 1px;" >
+<div class=" container justify-content-center hist d-block my-5 mx-auto" style="top: 1px;" >
     <center><h2 class=" hist h2 text-white" style="margin-top: 100px;">Kilinochchi Central coloage</h2></center>
     <hr class="hr bg-light">
     <blockquote class="blockquote">
 
-    <p class="text-white ">The first school of Kilinochchi district which was established in 1927 by sir Pon. Ramanathan in the
+    <p class="text-white ">The first school of Kilinochchi district which was established in 1927 by sir Pon.Ramanathan in the
         heart of the town, where the Kilinochchi Maha Vidyalayam is operated at present time close to
         Kakkakadai junction along vilson road surrounded by the source of water and green land, the only
         aim was to give the proper education to the children of workers who had been deploying at
         construction work of Iranaimadu tank.
-        The Paranthan chemical factory was started by the great effort of Mr. G. G. Ponnambalam. So that
-        the kids of the employers also began to get to this school, the population of students were suddenly
+        The Paranthan chemical factory was started by the great effort of Mr. G. G. Ponnambalam.
+        So that the kids of the employers also began to get to this school, the population of students were suddenly
         increased, on the other hand the rooms for pupils was lack.
         In 1960 the people settled at Thirunagar then the number of students was increased from 250 to
         approximately 1000 in 1965.
@@ -29,20 +29,20 @@
         the instruction of government agent of Jaffna, 50 acres of land was handed over to the school in
         1947, though the land was very thick jungle. However the principal, the people of neighboring
         villagers and Rural Development Society..
-        Who made a Shramadana for the preparation of 4 acres of land. Member of Parliament
-        Mr.V.Ananthashankari and education department provided financial support to construct a new
+        Who made a Shramadana for the preparation of 4 acres of land.
+        Member of Parliament Mr.V.Ananthashankari and education department provided financial support to construct a new
         building of school.
         In 21.09.1977 the Kilinochchi Maha Vidyalayam began its journey so the day could be a milestone
         for the blossom of present Kilinochchi Central College, where there classes from grade 7 upto A/L
         function. The grades from 1 to 6 functioned at earliest location. In 1982 the new classes were
         started at newly constructed building complex.
-        In addition pupils took very keen interest not only in studies but also extra-curricular activities. One
-        Mast.K.Gowreesvaran student of our school was selected to medical faculty.
+        In addition pupils took very keen interest not only in studies but also extra-curricular activities. 
+        One Mast.K.Gowreesvaran student of our school was selected to medical faculty.
         In 1982 Kilinochchi cluster school system was introduced Mr. R. Sinnathamby was promoted as the
-        cluster principal, and then Mr. S. Gunasingarasa was appointed as the principal to this school. Most
-        of the students are from very poor family like lab our parents and farmers.
-        Due to the war the school was badly damaged in the years of 2007 and 2008. In 2010, this school
-        was functioning as transist camp of internally displaced persons.
+        cluster principal, and then Mr. S. Gunasingarasa was appointed as the principal to this school.
+        Most of the students are from very poor family like lab our parents and farmers.
+        Due to the war the school was badly damaged in the years of 2007 and 2008.
+        In 2010, this school was functioning as transist camp of internally displaced persons.
         So, temporarily this school had to operate under the roof of NAITA just along the A9 main road at
         the same year the school had been included under the ‘Isuru School System’, from then primary
         division and secondary section was started to function separately.
@@ -52,38 +52,47 @@
         <div>
             <div class="container mx-4">
                 <center><h3 class="h3 text-white mx-auto">History of Time Line</h3></center>
+                <!-- <hr class="hr bg-light"> -->
                 <div class="vr d-block bg-warning my-0" style="height: 100px; width: 2px;">
 
 
                 </div>
-                <div class="d-block  "><button class="d-inline btn btn-primary">1963</button><p class="d-inline text-white mx-4">Upgraded as Kilinochchi Maha Vidyalayam and Examination Center for G.C.E (O/L).</p></div>
+                <div class="d-block  "><button class="d-inline btn btn-warning">1963</button><p class="d-inline text-white mx-4">Upgraded as Kilinochchi Maha Vidyalayam and Examination Center for G.C.E (O/L).</p></div>
                 
                 <div class="vr d-block bg-warning my-0">
 
                 </div>
                 <div class="d-block">
-                <button class="d-inline btn btn-primary">1969</button>
-                <p class="d-inline text-white">Students population increased from 250 to 1000.</p>
+                <button class="d-inline btn btn-warning">1969</button>
+                <p class="d-inline text-white mx-4">Students population increased from 250 to 1000.</p>
                 </div>
                 <div class="vr d-block bg-warning my-0" >
 
                 </div>
+                <div class=""> 
+                    <div class="row-sm-cols-2 row-cols-2">
                 {% for h in hist %}
-                <div class="d-block">
+                <!-- <div class="container"> -->
+                <div class="d-block ">
                     <div class="vr d-block bg-warning my-0" ></div>
                     <!-- <div class="vr d-block bg-warning my-0" >
 
                     </div> -->
-                    <button class="d-inline btn btn-warning my-3">{{h.histdate}}</button>
-                    <p class="d-inline text-white mx-4 ">{{h.histdetail}}</p>
-                    </div>
+                    <!-- <div class="col-2"> -->
 
-                    <div class="vr d-block bg-warning my-0" ></div>
+                    <button class="d-inline btn btn-warning my-0 ">{{h.histdate}}</button>
+                    <!-- </div> -->
+                    
+                    <p class="d-inline text-white mx-4 ">{{h.histdetail}}</p>
+
+                    <div class="vr d-block bg-warning my-0 " ></div>
                     <!-- <div class="vr d-block bg-warning my-0" >
     
                     </div> -->
-
+                    </div>
                 {% endfor %}
+                </div>
+                </div>
             </div>
         </div>
         

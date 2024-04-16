@@ -1,5 +1,6 @@
 from django.shortcuts import render
-
+from django.db.models import Count
+from django.db.models.functions import  ExtractMonth,ExtractYear
 # Create your views here.
 from django.http import HttpResponse
 from .models import *
@@ -37,3 +38,16 @@ def oba(request):
 
 def sgallery(request):
     return render(request,'knctem/sgallery.html')
+def alevents(request):
+    # nev=nevbar.objects.filter(status=True).order_by('order')
+  
+    events = event.objects.filter(status=True).order_by('-eventdate')
+    alleventsbydm = event.objects.annotate(year=ExtractYear('eventdate'),month=ExtractMonth('eventdate')).values('year','month').annotate(total=Count('eventid')).order_by('year','month')
+    d_year = event.objects.values_list('eventdate__year',flat=True).distinct().order_by('eventdate__year')
+    pornhub={}
+    for year in d_year:
+        pornhub[d_year] = event.objects.filter(eventdate__year=year).values_list('eventdate__month',flat=True).distinct().order_by('eventdate__month')
+    print(alleventsbydm)
+    print(events)
+    print(nev)
+    return render(request,'knctem/events.html',{'nev':nev,'fk':'fk','event':events})

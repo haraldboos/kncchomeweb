@@ -1,0 +1,26 @@
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+      {% for ach in achev %}
+      <div class="swiper-slide">
+        <div class="card col-2 carad boybg text-white border-warning" style="width: 17rem;" data-aos="flip-left" data-aos-duration="1000">
+        <img src="{{ ach.coverimg.url }}" class="card-img-top" alt="...">
+        <a class="text-decoration-none text-white" href="{% url 'galary' ach.eventid %}">
+
+        <div class="card-body">
+            <h4 class="card-header  ">{{ ach.eventitle }}</h4>
+
+          <!-- <p class="card-text">{{ ach.adetail }}</p> -->
+        </div>
+        </a>
+        <div class="card-footer border-warning justify-content-center">{{ ach.eventdate }}</div>    
+
+      </div>
+      <!-- </div> -->
+    </div>
+    {% endfor %}
+      <!-- Add more cards as needed -->
+    </div>
+    <!-- Add pagination -->
+    <div class="swiper-pagination"></div>
+
+</div>
