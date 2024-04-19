@@ -149,3 +149,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # INTERNAL_IPS = [
 #     "127.0.0.1",
 # ]
+JAZZMIN_SETTINGS = {
+    "site_title":"Kilinochchi central collage web admin",
+    "site_header":"KNKCC",
+    "site_logo":"images/oll/lo.png",
+    # "show_ui_builder": True,  # Show the UI builder button
+    # "show_ui_builder_method": "POST"
+}

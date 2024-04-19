@@ -4,6 +4,7 @@ from django.db.models.functions import  ExtractMonth,ExtractYear
 # Create your views here.
 from django.http import HttpResponse
 from .models import *
+
 nev=nevbar.objects.filter(status=True).order_by('order')
 
 def home(request):
@@ -46,8 +47,19 @@ def alevents(request):
     d_year = event.objects.values_list('eventdate__year',flat=True).distinct().order_by('eventdate__year')
     pornhub={}
     for year in d_year:
-        pornhub[d_year] = event.objects.filter(eventdate__year=year).values_list('eventdate__month',flat=True).distinct().order_by('eventdate__month')
-    print(alleventsbydm)
-    print(events)
+        print(year)
+        pornhub[year] = event.objects.filter(eventdate__year=year).values_list('eventdate__month',flat=True).distinct().order_by('eventdate__month')
+    events_by_year_month = {}
+    for event_data in alleventsbydm:
+        year = event_data['year']
+        month = event_data['month']
+        events_for_month = event.objects.filter(eventdate__year=year, eventdate__month=month).distinct()
+        # print(events_for_month)
+        events_by_year_month.setdefault(year, {}).setdefault(month, list(events_for_month))
+        # print(events_by_year_month,1111)
+
+    print(alleventsbydm,1111)
+    print(type(pornhub))
+    print(events_by_year_month)
     print(nev)
-    return render(request,'knctem/events.html',{'nev':nev,'fk':'fk','event':events})
+    return render(request,'knctem/events.html',{'nev':nev,'fk':'fk','event':events,'years':pornhub,'eventss':events_by_year_month})

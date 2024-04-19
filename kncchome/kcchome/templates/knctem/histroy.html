@@ -8,11 +8,12 @@
 </div> -->
 {% include 'inc1/nevv.html' %}
 <div class=" container justify-content-center hist d-block my-5 mx-auto" style="top: 1px;" >
-    <center><h2 class=" hist h2 text-white" style="margin-top: 100px;">Kilinochchi Central coloage</h2></center>
+    <center><h2 class=" hist h2 text-white" style="margin-top: 100px;">History of Kilinochchi Central coloage</h2></center>
     <hr class="hr bg-light">
     <blockquote class="blockquote">
 
-    <p class="text-white ">The first school of Kilinochchi district which was established in 1927 by sir Pon.Ramanathan in the
+    <p class="text-white  ">
+        The first school of Kilinochchi district which was established in 1927 by sir Pon.Ramanathan in the
         heart of the town, where the Kilinochchi Maha Vidyalayam is operated at present time close to
         Kakkakadai junction along vilson road surrounded by the source of water and green land, the only
         aim was to give the proper education to the children of workers who had been deploying at
@@ -49,10 +50,10 @@
         Finally in 2011 the building of school was renovated and started to continue its teaching learning
         process at own premises.</p>
         </blockquote>
+        <!-- <section class="bg-white">
         <div>
             <div class="container mx-4">
                 <center><h3 class="h3 text-white mx-auto">History of Time Line</h3></center>
-                <!-- <hr class="hr bg-light"> -->
                 <div class="vr d-block bg-warning my-0" style="height: 100px; width: 2px;">
 
 
@@ -72,29 +73,71 @@
                 <div class=""> 
                     <div class="row-sm-cols-2 row-cols-2">
                 {% for h in hist %}
-                <!-- <div class="container"> -->
                 <div class="d-block ">
-                    <div class="vr d-block bg-warning my-0" ></div>
-                    <!-- <div class="vr d-block bg-warning my-0" >
-
-                    </div> -->
-                    <!-- <div class="col-2"> -->
+                
 
                     <button class="d-inline btn btn-warning my-0 ">{{h.histdate}}</button>
-                    <!-- </div> -->
                     
                     <p class="d-inline text-white mx-4 ">{{h.histdetail}}</p>
 
                     <div class="vr d-block bg-warning my-0 " ></div>
-                    <!-- <div class="vr d-block bg-warning my-0" >
-    
-                    </div> -->
+                    
                     </div>
                 {% endfor %}
                 </div>
                 </div>
             </div>
         </div>
+    </section> -->
+    <section>
+        <div class="container py-4">
+            <h2 class="font-weight-light text-center text-white  py-3">our HISTORY of Time line</h2>
+        
+            <!-- timeline item 1 -->
+            {% for h in hist %}
+
+            <!--/row-->
+            <!-- timeline item 2 -->
+            <div class="row">
+                <div class="col-auto text-center flex-column d-none d-sm-flex">
+                    <div class="row h-50">
+                        <div class="col  border-end">&nbsp;</div>
+                        <div class="col">&nbsp;</div>
+                    </div>
+                    <h5 class="m-2">
+                        <span class="badge rounded-pill bg-warning">&nbsp;</span>
+                    </h5>
+                    <div class="row h-50">
+                        <div class="col border-end">&nbsp;</div>
+                        <div class="col">&nbsp;</div>
+                    </div>
+                </div>
+                <div class="col py-2">
+                    <div class="card border-warning bg-dark shadow">
+                        <div class="card-body">
+                            <div class="float-end text-white">{{h.histdate}}</div>
+                            <h4 class="card-title text-white">EVENT HEADING</h4>
+                            <p class="card-text text-white">{{h.histdetail}}</p>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/row-->
+            <!-- timeline item 3 -->
+            
+            <!--/row-->
+            <!-- timeline item 4 -->
+            {% endfor %}
+
+            <!--/row-->
+        </div>
+        <!--container-->
+        
+        <hr class="my-5 hr border-warning">
+        
+        
+        </div>
+    </section>
         
 </div>
 {% endblock content %}

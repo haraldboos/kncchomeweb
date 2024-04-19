@@ -131,7 +131,7 @@ align-items: center;
 }
 
 }
-@media screen and (max-width:320px){
+@media screen and (max-width:321px){
 .nevimg{
 width: auto;
 }
@@ -139,6 +139,9 @@ width: auto;
 .logo{
 align-self: center;
 /* width: 10px; */
+.ev{
+    margin-top: 20%;
+}
 }
 }
 
@@ -211,7 +214,7 @@ margin-top:20px;
 z-index:99;
 }
 .nevbtton:hover{
-background-color: blue;
+background-color: rgb(255, 145, 0);
 }
 /* .swiper {
 width: 100%;
